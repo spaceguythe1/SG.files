@@ -39,7 +39,7 @@ if(startchec == "y"):
 
     # fastfetch
     os.system(f"mkdir /home/{userwsudo}/.config/fastfetch && mv /root/archerthefact/ffconfig/* /home/{userwsudo}/.config/fastfetch/")
-    os.system(f"sed -i 'fastfetch --logo-color-1 white --logo-color-2 red --color red' /home/{userwsudo}/.bashrc")
+    os.system(f"echo fastfetch --logo-color-1 white --logo-color-2 red --color red >> /home/{userwsudo}/.bashrc")
 
 
     # kitty
