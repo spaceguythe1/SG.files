@@ -18,14 +18,14 @@ if(startchec == "y"):
 
     print("what should your user be called? (will have sudo)")
     userwsudo = input()
-    os.system("useradd -m {userwsudo}")
-    os.system("usermod -aG wheel {userwsudo}")
-    os.system("passwd {userwsudo}")
+    os.system(f"useradd -m {userwsudo}")
+    os.system(f"usermod -aG wheel {userwsudo}")
+    os.system(f"passwd {userwsudo}")
     time.sleep(0.1)
     print("created your user!")
     time.sleep(0.1)
 
     print("downloading de && utilities")
     os.system("pacman -S xfce4 cava fastfetch firefox vlc kate sddm")
-    os.system("su {userwsudo} && pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && exit")
+    os.system(f"su {userwsudo} && pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && exit")
 
