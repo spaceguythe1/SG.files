@@ -27,5 +27,37 @@ if(startchec == "y"):
 
     print("downloading de && utilities")
     os.system("pacman -S xfce4 cava fastfetch firefox vlc kate sddm")
-    os.system(f"su {userwsudo} && pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && exit")
+#  os.system(f"su {userwsudo} && pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && exit")
 
+
+    # Configure xfce and fastfetch
+    # /usr/share/backgrounds/xfce/xfce-teal.jpg
+    os.system("rm -f /usr/share/backgrounds/xfce/*")
+    os.system("mv /root/archerthefact/wall.png /usr/share/backgrounds/xfce/xfce.teal.jpg")
+
+    # fastfetch
+    os.system(f"mkdir /home/{userwsudo}/.config/fastfetch && mv /root/archerthefact/ffconfig/* /home/{userwsudo}/.config/fastfetch/")
+    os.system("sed -i 'fastfetch --logo-color-1 white --logo-color-2 red --color red' ~/.bashrc")
+
+
+    # kitty
+    os.system("pacman -S kitty")
+    os.system(f"mkdir /home/{userwsudo}/.config/kitty && mv /root/archerthefact/kitty.conf /home/{userwsudo}/.config/kitty/")
+
+
+    # Installing tarm! (hopeless plug)
+    print("Installing utils by me...")
+    time.sleep(0.1)
+    os.system("rm -rf ~/tarm /usr/local/bin/tarm && git clone https://github.com/spaceguythe1/tarm.git && mv ~/tarm/tarm /usr/local/bin && chmod +x /usr/local/bin/tarm && rm -rf ~/tarm")
+
+if(startchec == "y"):
+    os.system("systemctl --enable sddm.service")
+    time.sleep(0.05)
+    print()
+    print()
+    print("Installation finished!")
+    time.sleep(0.5)
+    print("its reccommended to reboot right after install.")
+else:
+    print()
+    print("Quitting...")
