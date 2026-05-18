@@ -14,7 +14,7 @@ if(startchec == "y"):
     time.sleep(0.05)
     os.system("pacman -S sudo")
     os.system('echo "%wheel ALL=(ALL:ALL) ALL" | sudo tee /etc/sudoers.d/wheel')
-    time.sleep("0.1")
+    time.sleep(0.1)
 
     print("what should your user be called? (will have sudo)")
     userwsudo = input()
