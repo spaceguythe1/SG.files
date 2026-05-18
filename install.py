@@ -34,8 +34,9 @@ if(startchec == "y"):
 
     # Configure xfce and fastfetch
     # /usr/share/backgrounds/xfce/xfce-teal.jpg
-    os.system("rm -f /usr/share/backgrounds/xfce/*")
-    os.system("mv /root/archerthefact/wall.png /usr/share/backgrounds/xfce/xfce.teal.jpg")
+    # os.system("rm -f /usr/share/backgrounds/xfce/*")
+    os.system(f"mkdir /home/{userwsudo}/Pictures")
+    os.system(f"mv /root/archerthefact/wall.png /home/{userwsudo}/Pictures")
 
     # fastfetch
     os.system(f"mkdir /home/{userwsudo}/.config/fastfetch && mv /root/archerthefact/ffconfig/* /home/{userwsudo}/.config/fastfetch/")
