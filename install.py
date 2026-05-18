@@ -48,11 +48,11 @@ if(startchec == "y"):
 
 
     # Installing tarm! (hopeless plug)
-    print("Installing utils by me...")
-    time.sleep(0.1)
-    os.system("rm -rf ~/tarm /usr/local/bin/tarm && git clone https://github.com/spaceguythe1/tarm.git && mv ~/tarm/tarm /usr/local/bin && chmod +x /usr/local/bin/tarm && rm -rf ~/tarm")
-    os.system("chmod +x /usr/local/bin/tarm")
-    os.system("rm -rf ~/tarm")
+    # print("Installing utils by me...")
+    # time.sleep(0.1)
+    # os.system("rm -rf ~/tarm /usr/local/bin/tarm && git clone https://github.com/spaceguythe1/tarm.git && mv ~/tarm/tarm /usr/local/bin && chmod +x /usr/local/bin/tarm && rm -rf ~/tarm")
+    # os.system("chmod +x /usr/local/bin/tarm")
+    # os.system("rm -rf ~/tarm")
 
 if(startchec == "y"):
     os.system("systemctl enable sddm.service")
